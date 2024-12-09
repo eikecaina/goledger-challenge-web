@@ -1,0 +1,13 @@
+.root {
+  @apply flex min-h-screen bg-codGray;
+}
+.root > div {
+  @apply relative flex flex-col flex-1 w-full overflow-y-auto;
+  height: calc(100vh - 90px);
+}
+.root.tracklist-is-empty > div {
+  height: 100vh;
+}
+.root > div > main {
+  @apply flex px-8 z-20;
+}

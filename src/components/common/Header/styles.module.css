@@ -1,0 +1,6 @@
+.root {
+  @apply sticky z-30 top-0 w-full h-16 min-h-[64px] bg-transparent;
+}
+.root > div {
+  @apply flex items-center h-full px-8;
+}

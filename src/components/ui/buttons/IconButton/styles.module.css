@@ -1,0 +1,37 @@
+.root {
+  @apply flex items-center justify-center h-14 w-14 rounded-full;
+}
+.root:disabled {
+  @apply opacity-70 cursor-not-allowed;
+}
+.root:not(:disabled):hover {
+  @apply scale-[1.04];
+}
+
+.root.lg {
+  @apply h-14 w-14;
+}
+.root.sm {
+  @apply h-8 w-8;
+}
+
+.root.primary {
+  @apply bg-malachite hover:bg-malachite-hover;
+}
+
+.root.light {
+  @apply bg-white;
+}
+
+.root.dark {
+  /* prettier-ignore */
+  background-color: theme('colors.black')b3;
+}
+
+.root.transparent {
+  @apply bg-transparent;
+}
+
+.root:not(:disabled).transparent:hover svg {
+  fill: theme('colors.white');
+}

@@ -1,51 +1,51 @@
-# GoLedger Challenge
+<h1>Sobre o Projeto</h1>
+<p>Este projeto foi desenvolvido com foco na utilização de APIs, utilizando um template pré-existente no qual foram realizados ajustes e a criação de algumas páginas do zero.</p>
+<p>As principais tecnologias utilizadas foram:</p>
+<ul>
+  <li><strong>NextJS</strong> e <strong>ReactJS</strong> para a estrutura do projeto.</li>
+  <li><strong>Tailwind CSS</strong> e <strong>Ant Design</strong> para estilização, incluindo algumas mensagens.</li>
+  <li><strong>Hooks do React</strong> para gerenciamento de estado e lógica.</li>
+  <li>Um arquivo <code>.env.local</code> foi criado para armazenar variáveis de ambiente, permitindo configurar o login necessário para realizar as requisições dos endpoints.</li>
+</ul>
 
-In this challenge you will create a web interface to a blockchain application. In this application you must implement a streming service-like interface, with artist, album, song and playlist registration.
+<h2>Tecnologias Utilizadas</h2>
+<ul>
+  <li><strong>Next.js</strong></li>
+  <li><strong>React.js</strong></li>
+  <li><strong>Tailwind CSS</strong></li>
+  <li><strong>Ant Design</strong></li>
+</ul>
 
-# Requirements
+<h2>Como Rodar o Projeto</h2>
+<ol>
+  <li>
+    <p>Clone o repositório:</p>
+    <pre><code>git clone &lt;URL_DO_REPOSITORIO&gt;
+cd &lt;PASTA_DO_PROJETO&gt;</code></pre>
+  </li>
+  <li>
+    <p>Instale as dependências:</p>
+    <pre><code>npm install</code></pre>
+  </li>
+  <li>
+    <p>Configure as variáveis de ambiente:</p>
+    <p>Crie um arquivo <code>.env.local</code> na raiz do projeto com o seguinte conteúdo:</p>
+    <pre><code>NEXT_PUBLIC_API_USERNAME={username} # Substitua {username} pelo nome de usuário
+NEXT_PUBLIC_API_PASSWORD={password} # Substitua {password} pela senha</code></pre>
+    <p><strong>Atenção:</strong> Sem este arquivo, as requisições aos endpoints não irão funcionar.</p>
+  </li>
+  <li>
+    <p>Inicie o servidor de desenvolvimento:</p>
+    <pre><code>npm run dev</code></pre>
+  </li>
+  <li>
+    <p>Acesse o projeto no navegador:</p>
+    <p>O servidor estará disponível em: <a href="http://localhost:3000" target="_blank">http://localhost:3000</a></p>
+  </li>
+</ol>
 
-- Your application should be able to add/remove/edit and show all artists, albums, songs and playlists;
-- Use **React** or **Next.js** (all UI libraries are allowed);
-
-## Instructions
-
-- Fork the repository [https://github.com/goledgerdev/goledger-challenge-web](https://github.com/goledgerdev/goledger-challenge-web)
-    - Fork it, do **NOT** clone it, since you will need to send us your forked repository
-    - If you **cannot** fork it, create a private repository and give access to `samuelvenzi` and `jefo3`.
-- Create an web application using React. You will implement the basic operations provided by the API, which are `Create`, `Update`, `Delete` and `Search`.
-- Improve your application with a beautiful UI.
-
-## Server
-
-The data are obtained using a rest server at this address: `http://ec2-54-91-215-149.compute-1.amazonaws.com`
-
-Also, a Swagger with the endpoints specifications for the operations is provided at this address: `http://ec2-54-91-215-149.compute-1.amazonaws.com/api-docs/index.html`.
-
-Note: The API is protected with Basic Auth. The credentials were sent to you by email.
-
-Tip: execute each operation in the Swagger for information on payload format and endpoint addresses. See examples below.
-
-### Get Schema
-Execute a `getSchema` operation to get information on which asset types are available. Don't forget to authenticate with the credentials provided.
-
-```bash
-curl -X GET "http://ec2-54-91-215-149.compute-1.amazonaws.com/api/query/getSchema" -H "accept: */*"
-```
-
-Execute a getSchema with a payload to get more details on a particula asset.
-
-```bash
-curl -X POST "http://ec2-54-91-215-149.compute-1.amazonaws.com/api/query/getSchema" -H "accept: */*" -H "Content-Type: application/json" -d "{\"assetType\":\"artist\"}"
-```
-Tip: the same can be done with transactions, using the `getTx` endpoint.
-
-### Search
-Perform a search query on a particular asset type.
-```bash
-curl -X POST "http://ec2-54-91-215-149.compute-1.amazonaws.com/api/query/search" -H "accept: */*" -H "Content-Type: application/json" -d "{\"query\":{\"selector\":{\"@assetType\":\"artist\"}}}"
-```
-Tip: to read a specific asset, you can use the `readAsset` endpoint.
-
-## Complete the challenge
-
-To complete the challenge, you must send us the link to your forked repository with the code of your application. Please, provide instructions to execute the code.
+<h2>Observações</h2>
+<ul>
+  <li>Certifique-se de que as variáveis de ambiente estão corretamente configuradas.</li>
+  <li>Este projeto utiliza autenticação para acessar as APIs; sem o login configurado, as requisições não terão sucesso.</li>
+</ul>

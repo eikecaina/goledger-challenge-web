@@ -1,0 +1,55 @@
+.root {
+  @apply text-white fixed bottom-0 flex w-screen h-[90px] bg-woodSmoke 
+  border-t-1 border-woodSmoke-hover;
+}
+.root > footer {
+  @apply grid grid-cols-3 items-center justify-between px-4 w-full h-full;
+}
+.footer_left {
+  @apply flex items-center;
+}
+.footer_left > div {
+  @apply flex flex-col ml-3.5 max-w-[260px] w-full;
+}
+.footer_left > div > span {
+  @apply text-sm line-clamp-1;
+}
+.footer_left > div > p {
+  @apply text-[11px] text-lightGray;
+}
+.footer_center {
+  @apply flex flex-col justify-center items-center space-y-2;
+}
+.player_btns {
+  @apply flex justify-center w-full space-x-4;
+}
+.player_bar {
+  @apply flex items-center w-full space-x-2;
+}
+.player_bar > span {
+  @apply text-[11px] text-[#a7a7a7];
+}
+.footer_right {
+  @apply flex items-center justify-end;
+}
+.footer_right > span {
+  @apply w-24;
+}
+
+/*slider*/
+
+.slider:not(:hover) :global(.rc-slider-track) {
+  @apply bg-lightGray;
+}
+.slider:hover :global(.rc-slider-track) {
+  @apply bg-malachite;
+}
+.slider :global(.rc-slider-rail) {
+  @apply bg-[#535353];
+}
+.slider :global(.rc-slider-handle) {
+  @apply bg-white -mt-1 w-3 h-3 opacity-0;
+}
+.slider:hover :global(.rc-slider-handle) {
+  @apply opacity-100;
+}

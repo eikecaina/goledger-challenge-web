@@ -1,0 +1,17 @@
+.root {
+  @apply flex w-full relative col-span-4 lg:col-span-3 xl:col-span-2 overflow-hidden
+  rounded-md aspect-square;
+}
+.root > h3 {
+  @apply font-bold text-2xl text-white absolute top-0 p-4;
+}
+.root > span {
+  bottom: 0;
+  -webkit-box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 20%);
+  height: 100px;
+  position: absolute;
+  width: 100px;
+  right: 0;
+  transform: rotate(25deg) translate(18%, -2%);
+}

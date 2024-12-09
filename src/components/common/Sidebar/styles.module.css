@@ -1,0 +1,33 @@
+.root {
+  @apply flex flex-col w-[241px] pt-6 bg-black;
+}
+.logo_wrapper {
+  @apply px-6 h-12 mb-[18px];
+}
+.list {
+  @apply flex flex-col w-full;
+}
+.list li {
+  @apply flex w-full px-2 h-10;
+}
+.list li a {
+  @apply flex items-center w-full px-4 space-x-4 
+  text-lightGray text-sm duration-300;
+}
+.list li svg {
+  @apply duration-300;
+}
+
+.list li.active a {
+  @apply text-white;
+}
+.list li.active svg {
+  fill: theme('colors.white');
+}
+
+.list li:hover a {
+  @apply text-white;
+}
+.list li:hover svg {
+  fill: theme('colors.white');
+}
